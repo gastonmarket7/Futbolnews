@@ -146,4 +146,28 @@ body {
   height: auto;
   display: block;
   margin: 10px auto;    /* Agrega espacio superior e inferior */
+} /* Imagen de noticia */
+.noticia-imagen {
+  width: 100%;       /* La imagen ocupa el 100% del ancho disponible */
+  height: auto;      /* Mantiene la relación de aspecto de la imagen */
+  display: block;    /* Evita que la imagen tenga espacio extra debajo de ella */
+  margin: 0 auto;    /* Centra la imagen en el contenedor */
+  object-fit: cover; /* Hace que la imagen se recorte de forma que cubra el contenedor sin distorsionarse */
+}
+
+/* Imagen pequeña (si las hay) */
+.imagen-pequena {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto; /* Espaciado arriba y abajo */
+  object-fit: contain; /* Asegura que la imagen se ajuste completamente sin recortarse */
+}
+
+/* Media query para dispositivos con pantallas pequeñas (por ejemplo, teléfonos) */
+@media screen and (max-width: 768px) {
+  .noticia-imagen {
+    width: 100%;   /* Se asegura de que ocupe todo el ancho disponible */
+    height: auto;  /* Mantiene la relación de aspecto */
+  }
 }
